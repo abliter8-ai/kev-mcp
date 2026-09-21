@@ -2,6 +2,11 @@
 
 Automated tests use the official MCP Python client against real stdio and HTTP transports. These application examples are configuration guidance; they do not claim each named application was tested interactively.
 
+The durable deployment additionally verified both HTTP endpoints through the installed
+Hermes native MCP client in all 14 configured profiles, including real evaluations.
+See [dual-model service setup](durable-services.md) for the tested Hermes configuration.
+This does not claim Open WebUI testing or autonomous model tool-selection coverage.
+
 ## Coding agents and Hermes
 
 For clients accepting `mcpServers` JSON, configure:

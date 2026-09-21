@@ -1,0 +1,23 @@
+[Unit]
+Description=Kev %i document MCP bridge
+After=network-online.target kev-runtime@%i.service
+Wants=network-online.target kev-runtime@%i.service
+
+[Service]
+Type=exec
+User=@SERVICE_USER@
+WorkingDirectory=@SERVICE_ROOT@
+EnvironmentFile=/etc/kev-mcp/common.env
+EnvironmentFile=/etc/kev-mcp/%i.env
+ExecStart=/bin/bash @SERVICE_ROOT@/current/scripts/bridge-service.sh
+ExecStartPost=@SERVICE_ROOT@/bridge-venv/bin/python @SERVICE_ROOT@/current/scripts/wait-bridge.py
+TimeoutStartSec=60
+Restart=always
+RestartSec=5
+TimeoutStopSec=30
+UMask=0077
+NoNewPrivileges=true
+PrivateTmp=true
+
+[Install]
+WantedBy=multi-user.target
