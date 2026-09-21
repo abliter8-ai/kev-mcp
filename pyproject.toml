@@ -1,0 +1,44 @@
+[build-system]
+requires = ["hatchling>=1.27"]
+build-backend = "hatchling.build"
+
+[project]
+name = "kev-mcp"
+version = "0.1.0"
+description = "Document decisions with local Kev models over MCP"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "mcp>=2.2,<3",
+    "typesafe-sdk>=0.7,<1",
+    "httpx>=0.28,<1",
+    "trafilatura>=2,<3",
+    "uvicorn>=0.35,<1",
+    "httpx2>=2.13,<3",
+]
+
+[project.optional-dependencies]
+runtime = ["fastapi>=0.120,<1"]
+
+[project.scripts]
+kev-mcp = "kev_mcp.server:main"
+kev-mcp-runtime = "kev_mcp.runtime:main"
+
+[dependency-groups]
+dev = ["pytest>=8", "pytest-asyncio>=1", "ruff>=0.12", "mypy>=1.15", "fastapi>=0.120,<1"]
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py312"
+
+[tool.ruff.lint]
+select = ["E", "F", "I"]
+
+[tool.mypy]
+python_version = "3.12"
+ignore_missing_imports = true
+check_untyped_defs = true

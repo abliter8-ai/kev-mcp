@@ -1,0 +1,1056 @@
+{
+  "status": "passed",
+  "model_id": "jaredpalmer/kev-0.8b",
+  "checkpoint_revision": "225679690cdd1de6fceb1258b1bddf61c493cee9",
+  "capabilities": {
+    "contract": "kev-mcp-runtime-v1",
+    "strict_input": true,
+    "available": true,
+    "question_types": [
+      "noul",
+      "choice",
+      "score"
+    ],
+    "limits": {
+      "max_state": 8192,
+      "max_branch": 8192,
+      "max_packed": 16384,
+      "max_questions": 16
+    },
+    "runtime": {
+      "model_id": "jaredpalmer/kev-0.8b",
+      "checkpoint_revision": "225679690cdd1de6fceb1258b1bddf61c493cee9",
+      "source_revision": "4f8110a3f8620cc3a182ae9a708e4398492c4b1a",
+      "device": "rocm",
+      "torch": "2.8.0+rocm7.12.0",
+      "hip": "7.12.60610-2bd1678d3d",
+      "gpu": "AMD Radeon 890M Graphics"
+    },
+    "end_to_end_ms": 54.395569022744894
+  },
+  "cases": [
+    {
+      "expected": "billing",
+      "runs": [
+        {
+          "model": "kev-latest",
+          "usage": {
+            "input_tokens": 104,
+            "output_tokens": 153
+          },
+          "answers": {
+            "department": {
+              "type": "choice",
+              "choice": "billing",
+              "confidence": 1.0,
+              "probabilities": {
+                "billing": 1.0,
+                "shipping": 0.0,
+                "access": 0.0
+              }
+            },
+            "double_charge": {
+              "type": "noul",
+              "noul": 1.0
+            },
+            "urgency": {
+              "type": "score",
+              "score": 2.0,
+              "confidence": 1.0,
+              "legend": {
+                "0": "Can wait",
+                "1": "Normal priority",
+                "2": "Urgent, help immediately"
+              },
+              "probabilities": {
+                "0": 0.0,
+                "1": 0.0,
+                "2": 1.0
+              }
+            }
+          },
+          "token_accounting": {
+            "state_tokens": 27,
+            "branch_tokens": {
+              "department": 60,
+              "double_charge": 44,
+              "urgency": 54
+            },
+            "packed_tokens": 104,
+            "state_truncated": false
+          },
+          "runtime": {
+            "model_id": "jaredpalmer/kev-0.8b",
+            "checkpoint_revision": "225679690cdd1de6fceb1258b1bddf61c493cee9",
+            "source_revision": "4f8110a3f8620cc3a182ae9a708e4398492c4b1a",
+            "device": "rocm",
+            "torch": "2.8.0+rocm7.12.0",
+            "hip": "7.12.60610-2bd1678d3d",
+            "gpu": "AMD Radeon 890M Graphics"
+          },
+          "latency_ms": 556.5,
+          "memory": {
+            "peak_allocated_bytes": 1667230720,
+            "peak_reserved_bytes": 1793064960
+          },
+          "document": {
+            "document_id": "0e06f124-796c-4e47-ac51-e7e649f5eba4",
+            "sha256": "a92dcb26ff9179d1bf406e85acb914c4e0ec1349ad3eb7c189940801f9e3ef84",
+            "text_bytes": 123,
+            "line_count": 1,
+            "created_at": "2026-09-21T16:42:12.107557Z",
+            "title": "billing",
+            "source_url": null,
+            "fetched_at": null
+          },
+          "coverage": {
+            "kind": "full",
+            "start_line": 1,
+            "end_line": 1,
+            "total_lines": 1
+          },
+          "end_to_end_ms": 587.3725600540638
+        },
+        {
+          "model": "kev-latest",
+          "usage": {
+            "input_tokens": 104,
+            "output_tokens": 153
+          },
+          "answers": {
+            "department": {
+              "type": "choice",
+              "choice": "billing",
+              "confidence": 1.0,
+              "probabilities": {
+                "billing": 1.0,
+                "shipping": 0.0,
+                "access": 0.0
+              }
+            },
+            "double_charge": {
+              "type": "noul",
+              "noul": 1.0
+            },
+            "urgency": {
+              "type": "score",
+              "score": 2.0,
+              "confidence": 1.0,
+              "legend": {
+                "0": "Can wait",
+                "1": "Normal priority",
+                "2": "Urgent, help immediately"
+              },
+              "probabilities": {
+                "0": 0.0,
+                "1": 0.0,
+                "2": 1.0
+              }
+            }
+          },
+          "token_accounting": {
+            "state_tokens": 27,
+            "branch_tokens": {
+              "department": 60,
+              "double_charge": 44,
+              "urgency": 54
+            },
+            "packed_tokens": 104,
+            "state_truncated": false
+          },
+          "runtime": {
+            "model_id": "jaredpalmer/kev-0.8b",
+            "checkpoint_revision": "225679690cdd1de6fceb1258b1bddf61c493cee9",
+            "source_revision": "4f8110a3f8620cc3a182ae9a708e4398492c4b1a",
+            "device": "rocm",
+            "torch": "2.8.0+rocm7.12.0",
+            "hip": "7.12.60610-2bd1678d3d",
+            "gpu": "AMD Radeon 890M Graphics"
+          },
+          "latency_ms": 140.3,
+          "memory": {
+            "peak_allocated_bytes": 1746922496,
+            "peak_reserved_bytes": 1793064960
+          },
+          "document": {
+            "document_id": "0e06f124-796c-4e47-ac51-e7e649f5eba4",
+            "sha256": "a92dcb26ff9179d1bf406e85acb914c4e0ec1349ad3eb7c189940801f9e3ef84",
+            "text_bytes": 123,
+            "line_count": 1,
+            "created_at": "2026-09-21T16:42:12.107557Z",
+            "title": "billing",
+            "source_url": null,
+            "fetched_at": null
+          },
+          "coverage": {
+            "kind": "full",
+            "start_line": 1,
+            "end_line": 1,
+            "total_lines": 1
+          },
+          "end_to_end_ms": 151.89044014550745
+        },
+        {
+          "model": "kev-latest",
+          "usage": {
+            "input_tokens": 104,
+            "output_tokens": 153
+          },
+          "answers": {
+            "department": {
+              "type": "choice",
+              "choice": "billing",
+              "confidence": 1.0,
+              "probabilities": {
+                "billing": 1.0,
+                "shipping": 0.0,
+                "access": 0.0
+              }
+            },
+            "double_charge": {
+              "type": "noul",
+              "noul": 1.0
+            },
+            "urgency": {
+              "type": "score",
+              "score": 2.0,
+              "confidence": 1.0,
+              "legend": {
+                "0": "Can wait",
+                "1": "Normal priority",
+                "2": "Urgent, help immediately"
+              },
+              "probabilities": {
+                "0": 0.0,
+                "1": 0.0,
+                "2": 1.0
+              }
+            }
+          },
+          "token_accounting": {
+            "state_tokens": 27,
+            "branch_tokens": {
+              "department": 60,
+              "double_charge": 44,
+              "urgency": 54
+            },
+            "packed_tokens": 104,
+            "state_truncated": false
+          },
+          "runtime": {
+            "model_id": "jaredpalmer/kev-0.8b",
+            "checkpoint_revision": "225679690cdd1de6fceb1258b1bddf61c493cee9",
+            "source_revision": "4f8110a3f8620cc3a182ae9a708e4398492c4b1a",
+            "device": "rocm",
+            "torch": "2.8.0+rocm7.12.0",
+            "hip": "7.12.60610-2bd1678d3d",
+            "gpu": "AMD Radeon 890M Graphics"
+          },
+          "latency_ms": 140.7,
+          "memory": {
+            "peak_allocated_bytes": 1746922496,
+            "peak_reserved_bytes": 1793064960
+          },
+          "document": {
+            "document_id": "0e06f124-796c-4e47-ac51-e7e649f5eba4",
+            "sha256": "a92dcb26ff9179d1bf406e85acb914c4e0ec1349ad3eb7c189940801f9e3ef84",
+            "text_bytes": 123,
+            "line_count": 1,
+            "created_at": "2026-09-21T16:42:12.107557Z",
+            "title": "billing",
+            "source_url": null,
+            "fetched_at": null
+          },
+          "coverage": {
+            "kind": "full",
+            "start_line": 1,
+            "end_line": 1,
+            "total_lines": 1
+          },
+          "end_to_end_ms": 158.20176410488784
+        }
+      ]
+    },
+    {
+      "expected": "shipping",
+      "runs": [
+        {
+          "model": "kev-latest",
+          "usage": {
+            "input_tokens": 103,
+            "output_tokens": 154
+          },
+          "answers": {
+            "department": {
+              "type": "choice",
+              "choice": "shipping",
+              "confidence": 1.0,
+              "probabilities": {
+                "billing": 0.0,
+                "shipping": 1.0,
+                "access": 0.0
+              }
+            },
+            "double_charge": {
+              "type": "noul",
+              "noul": 0.09
+            },
+            "urgency": {
+              "type": "score",
+              "score": 0.0,
+              "confidence": 1.0,
+              "legend": {
+                "0": "Can wait",
+                "1": "Normal priority",
+                "2": "Urgent, help immediately"
+              },
+              "probabilities": {
+                "0": 1.0,
+                "1": 0.0,
+                "2": 0.0
+              }
+            }
+          },
+          "token_accounting": {
+            "state_tokens": 26,
+            "branch_tokens": {
+              "department": 59,
+              "double_charge": 43,
+              "urgency": 53
+            },
+            "packed_tokens": 103,
+            "state_truncated": false
+          },
+          "runtime": {
+            "model_id": "jaredpalmer/kev-0.8b",
+            "checkpoint_revision": "225679690cdd1de6fceb1258b1bddf61c493cee9",
+            "source_revision": "4f8110a3f8620cc3a182ae9a708e4398492c4b1a",
+            "device": "rocm",
+            "torch": "2.8.0+rocm7.12.0",
+            "hip": "7.12.60610-2bd1678d3d",
+            "gpu": "AMD Radeon 890M Graphics"
+          },
+          "latency_ms": 140.4,
+          "memory": {
+            "peak_allocated_bytes": 1746922496,
+            "peak_reserved_bytes": 1793064960
+          },
+          "document": {
+            "document_id": "17ce12d9-1df4-44a6-ae05-8e7d5451c29c",
+            "sha256": "587d42db0d02151d0588f4a09dd6864c73ab5f0fd6a73da29f57a335e3ad0c6b",
+            "text_bytes": 115,
+            "line_count": 1,
+            "created_at": "2026-09-21T16:42:13.011377Z",
+            "title": "shipping",
+            "source_url": null,
+            "fetched_at": null
+          },
+          "coverage": {
+            "kind": "full",
+            "start_line": 1,
+            "end_line": 1,
+            "total_lines": 1
+          },
+          "end_to_end_ms": 158.0807100981474
+        },
+        {
+          "model": "kev-latest",
+          "usage": {
+            "input_tokens": 103,
+            "output_tokens": 154
+          },
+          "answers": {
+            "department": {
+              "type": "choice",
+              "choice": "shipping",
+              "confidence": 1.0,
+              "probabilities": {
+                "billing": 0.0,
+                "shipping": 1.0,
+                "access": 0.0
+              }
+            },
+            "double_charge": {
+              "type": "noul",
+              "noul": 0.09
+            },
+            "urgency": {
+              "type": "score",
+              "score": 0.0,
+              "confidence": 1.0,
+              "legend": {
+                "0": "Can wait",
+                "1": "Normal priority",
+                "2": "Urgent, help immediately"
+              },
+              "probabilities": {
+                "0": 1.0,
+                "1": 0.0,
+                "2": 0.0
+              }
+            }
+          },
+          "token_accounting": {
+            "state_tokens": 26,
+            "branch_tokens": {
+              "department": 59,
+              "double_charge": 43,
+              "urgency": 53
+            },
+            "packed_tokens": 103,
+            "state_truncated": false
+          },
+          "runtime": {
+            "model_id": "jaredpalmer/kev-0.8b",
+            "checkpoint_revision": "225679690cdd1de6fceb1258b1bddf61c493cee9",
+            "source_revision": "4f8110a3f8620cc3a182ae9a708e4398492c4b1a",
+            "device": "rocm",
+            "torch": "2.8.0+rocm7.12.0",
+            "hip": "7.12.60610-2bd1678d3d",
+            "gpu": "AMD Radeon 890M Graphics"
+          },
+          "latency_ms": 142.8,
+          "memory": {
+            "peak_allocated_bytes": 1746922496,
+            "peak_reserved_bytes": 1793064960
+          },
+          "document": {
+            "document_id": "17ce12d9-1df4-44a6-ae05-8e7d5451c29c",
+            "sha256": "587d42db0d02151d0588f4a09dd6864c73ab5f0fd6a73da29f57a335e3ad0c6b",
+            "text_bytes": 115,
+            "line_count": 1,
+            "created_at": "2026-09-21T16:42:13.011377Z",
+            "title": "shipping",
+            "source_url": null,
+            "fetched_at": null
+          },
+          "coverage": {
+            "kind": "full",
+            "start_line": 1,
+            "end_line": 1,
+            "total_lines": 1
+          },
+          "end_to_end_ms": 159.756826935336
+        },
+        {
+          "model": "kev-latest",
+          "usage": {
+            "input_tokens": 103,
+            "output_tokens": 154
+          },
+          "answers": {
+            "department": {
+              "type": "choice",
+              "choice": "shipping",
+              "confidence": 1.0,
+              "probabilities": {
+                "billing": 0.0,
+                "shipping": 1.0,
+                "access": 0.0
+              }
+            },
+            "double_charge": {
+              "type": "noul",
+              "noul": 0.09
+            },
+            "urgency": {
+              "type": "score",
+              "score": 0.0,
+              "confidence": 1.0,
+              "legend": {
+                "0": "Can wait",
+                "1": "Normal priority",
+                "2": "Urgent, help immediately"
+              },
+              "probabilities": {
+                "0": 1.0,
+                "1": 0.0,
+                "2": 0.0
+              }
+            }
+          },
+          "token_accounting": {
+            "state_tokens": 26,
+            "branch_tokens": {
+              "department": 59,
+              "double_charge": 43,
+              "urgency": 53
+            },
+            "packed_tokens": 103,
+            "state_truncated": false
+          },
+          "runtime": {
+            "model_id": "jaredpalmer/kev-0.8b",
+            "checkpoint_revision": "225679690cdd1de6fceb1258b1bddf61c493cee9",
+            "source_revision": "4f8110a3f8620cc3a182ae9a708e4398492c4b1a",
+            "device": "rocm",
+            "torch": "2.8.0+rocm7.12.0",
+            "hip": "7.12.60610-2bd1678d3d",
+            "gpu": "AMD Radeon 890M Graphics"
+          },
+          "latency_ms": 142.8,
+          "memory": {
+            "peak_allocated_bytes": 1746922496,
+            "peak_reserved_bytes": 1793064960
+          },
+          "document": {
+            "document_id": "17ce12d9-1df4-44a6-ae05-8e7d5451c29c",
+            "sha256": "587d42db0d02151d0588f4a09dd6864c73ab5f0fd6a73da29f57a335e3ad0c6b",
+            "text_bytes": 115,
+            "line_count": 1,
+            "created_at": "2026-09-21T16:42:13.011377Z",
+            "title": "shipping",
+            "source_url": null,
+            "fetched_at": null
+          },
+          "coverage": {
+            "kind": "full",
+            "start_line": 1,
+            "end_line": 1,
+            "total_lines": 1
+          },
+          "end_to_end_ms": 159.16309296153486
+        }
+      ]
+    },
+    {
+      "expected": "access",
+      "runs": [
+        {
+          "model": "kev-latest",
+          "usage": {
+            "input_tokens": 95,
+            "output_tokens": 158
+          },
+          "answers": {
+            "department": {
+              "type": "choice",
+              "choice": "access",
+              "confidence": 1.0,
+              "probabilities": {
+                "billing": 0.0,
+                "shipping": 0.0,
+                "access": 1.0
+              }
+            },
+            "double_charge": {
+              "type": "noul",
+              "noul": 0.08
+            },
+            "urgency": {
+              "type": "score",
+              "score": 1.0,
+              "confidence": 0.99,
+              "legend": {
+                "0": "Can wait",
+                "1": "Normal priority",
+                "2": "Urgent, help immediately"
+              },
+              "probabilities": {
+                "0": 0.01,
+                "1": 0.97,
+                "2": 0.01
+              }
+            }
+          },
+          "token_accounting": {
+            "state_tokens": 18,
+            "branch_tokens": {
+              "department": 51,
+              "double_charge": 35,
+              "urgency": 45
+            },
+            "packed_tokens": 95,
+            "state_truncated": false
+          },
+          "runtime": {
+            "model_id": "jaredpalmer/kev-0.8b",
+            "checkpoint_revision": "225679690cdd1de6fceb1258b1bddf61c493cee9",
+            "source_revision": "4f8110a3f8620cc3a182ae9a708e4398492c4b1a",
+            "device": "rocm",
+            "torch": "2.8.0+rocm7.12.0",
+            "hip": "7.12.60610-2bd1678d3d",
+            "gpu": "AMD Radeon 890M Graphics"
+          },
+          "latency_ms": 138.1,
+          "memory": {
+            "peak_allocated_bytes": 1746922496,
+            "peak_reserved_bytes": 1793064960
+          },
+          "document": {
+            "document_id": "455c514e-8c51-48ea-9a36-5ca7275846e3",
+            "sha256": "b61159b0a5956807ee04224862e91070268495eac1ed892d065b40a20eb5e74c",
+            "text_bytes": 82,
+            "line_count": 1,
+            "created_at": "2026-09-21T16:42:13.493451Z",
+            "title": "access",
+            "source_url": null,
+            "fetched_at": null
+          },
+          "coverage": {
+            "kind": "full",
+            "start_line": 1,
+            "end_line": 1,
+            "total_lines": 1
+          },
+          "end_to_end_ms": 155.03549296408892
+        },
+        {
+          "model": "kev-latest",
+          "usage": {
+            "input_tokens": 95,
+            "output_tokens": 158
+          },
+          "answers": {
+            "department": {
+              "type": "choice",
+              "choice": "access",
+              "confidence": 1.0,
+              "probabilities": {
+                "billing": 0.0,
+                "shipping": 0.0,
+                "access": 1.0
+              }
+            },
+            "double_charge": {
+              "type": "noul",
+              "noul": 0.08
+            },
+            "urgency": {
+              "type": "score",
+              "score": 1.0,
+              "confidence": 0.99,
+              "legend": {
+                "0": "Can wait",
+                "1": "Normal priority",
+                "2": "Urgent, help immediately"
+              },
+              "probabilities": {
+                "0": 0.01,
+                "1": 0.97,
+                "2": 0.01
+              }
+            }
+          },
+          "token_accounting": {
+            "state_tokens": 18,
+            "branch_tokens": {
+              "department": 51,
+              "double_charge": 35,
+              "urgency": 45
+            },
+            "packed_tokens": 95,
+            "state_truncated": false
+          },
+          "runtime": {
+            "model_id": "jaredpalmer/kev-0.8b",
+            "checkpoint_revision": "225679690cdd1de6fceb1258b1bddf61c493cee9",
+            "source_revision": "4f8110a3f8620cc3a182ae9a708e4398492c4b1a",
+            "device": "rocm",
+            "torch": "2.8.0+rocm7.12.0",
+            "hip": "7.12.60610-2bd1678d3d",
+            "gpu": "AMD Radeon 890M Graphics"
+          },
+          "latency_ms": 136.5,
+          "memory": {
+            "peak_allocated_bytes": 1746922496,
+            "peak_reserved_bytes": 1793064960
+          },
+          "document": {
+            "document_id": "455c514e-8c51-48ea-9a36-5ca7275846e3",
+            "sha256": "b61159b0a5956807ee04224862e91070268495eac1ed892d065b40a20eb5e74c",
+            "text_bytes": 82,
+            "line_count": 1,
+            "created_at": "2026-09-21T16:42:13.493451Z",
+            "title": "access",
+            "source_url": null,
+            "fetched_at": null
+          },
+          "coverage": {
+            "kind": "full",
+            "start_line": 1,
+            "end_line": 1,
+            "total_lines": 1
+          },
+          "end_to_end_ms": 154.69139791093767
+        },
+        {
+          "model": "kev-latest",
+          "usage": {
+            "input_tokens": 95,
+            "output_tokens": 158
+          },
+          "answers": {
+            "department": {
+              "type": "choice",
+              "choice": "access",
+              "confidence": 1.0,
+              "probabilities": {
+                "billing": 0.0,
+                "shipping": 0.0,
+                "access": 1.0
+              }
+            },
+            "double_charge": {
+              "type": "noul",
+              "noul": 0.08
+            },
+            "urgency": {
+              "type": "score",
+              "score": 1.0,
+              "confidence": 0.99,
+              "legend": {
+                "0": "Can wait",
+                "1": "Normal priority",
+                "2": "Urgent, help immediately"
+              },
+              "probabilities": {
+                "0": 0.01,
+                "1": 0.97,
+                "2": 0.01
+              }
+            }
+          },
+          "token_accounting": {
+            "state_tokens": 18,
+            "branch_tokens": {
+              "department": 51,
+              "double_charge": 35,
+              "urgency": 45
+            },
+            "packed_tokens": 95,
+            "state_truncated": false
+          },
+          "runtime": {
+            "model_id": "jaredpalmer/kev-0.8b",
+            "checkpoint_revision": "225679690cdd1de6fceb1258b1bddf61c493cee9",
+            "source_revision": "4f8110a3f8620cc3a182ae9a708e4398492c4b1a",
+            "device": "rocm",
+            "torch": "2.8.0+rocm7.12.0",
+            "hip": "7.12.60610-2bd1678d3d",
+            "gpu": "AMD Radeon 890M Graphics"
+          },
+          "latency_ms": 141.6,
+          "memory": {
+            "peak_allocated_bytes": 1746922496,
+            "peak_reserved_bytes": 1793064960
+          },
+          "document": {
+            "document_id": "455c514e-8c51-48ea-9a36-5ca7275846e3",
+            "sha256": "b61159b0a5956807ee04224862e91070268495eac1ed892d065b40a20eb5e74c",
+            "text_bytes": 82,
+            "line_count": 1,
+            "created_at": "2026-09-21T16:42:13.493451Z",
+            "title": "access",
+            "source_url": null,
+            "fetched_at": null
+          },
+          "coverage": {
+            "kind": "full",
+            "start_line": 1,
+            "end_line": 1,
+            "total_lines": 1
+          },
+          "end_to_end_ms": 157.90246799588203
+        }
+      ]
+    }
+  ],
+  "followup": {
+    "model": "kev-latest",
+    "usage": {
+      "input_tokens": 50,
+      "output_tokens": 19
+    },
+    "answers": {
+      "again": {
+        "type": "noul",
+        "noul": 1.0
+      }
+    },
+    "token_accounting": {
+      "state_tokens": 33,
+      "branch_tokens": {
+        "again": 50
+      },
+      "packed_tokens": 50,
+      "state_truncated": false
+    },
+    "runtime": {
+      "model_id": "jaredpalmer/kev-0.8b",
+      "checkpoint_revision": "225679690cdd1de6fceb1258b1bddf61c493cee9",
+      "source_revision": "4f8110a3f8620cc3a182ae9a708e4398492c4b1a",
+      "device": "rocm",
+      "torch": "2.8.0+rocm7.12.0",
+      "hip": "7.12.60610-2bd1678d3d",
+      "gpu": "AMD Radeon 890M Graphics"
+    },
+    "latency_ms": 64.0,
+    "memory": {
+      "peak_allocated_bytes": 1746922496,
+      "peak_reserved_bytes": 1793064960
+    },
+    "document": {
+      "document_id": "c1ed9770-61b7-4185-afdd-e627fe68c332",
+      "sha256": "8b91d064c839147cefc6159e6836713606ab014436fffd9c2463f6e39d9c9793",
+      "text_bytes": 143,
+      "line_count": 2,
+      "created_at": "2026-09-21T16:42:13.966274Z",
+      "title": null,
+      "source_url": null,
+      "fetched_at": null
+    },
+    "coverage": {
+      "kind": "full",
+      "start_line": 1,
+      "end_line": 2,
+      "total_lines": 2
+    },
+    "end_to_end_ms": 79.83432104811072
+  },
+  "selection": {
+    "model": "kev-latest",
+    "usage": {
+      "input_tokens": 23,
+      "output_tokens": 20
+    },
+    "answers": {
+      "again": {
+        "type": "noul",
+        "noul": 0.18
+      }
+    },
+    "token_accounting": {
+      "state_tokens": 6,
+      "branch_tokens": {
+        "again": 23
+      },
+      "packed_tokens": 23,
+      "state_truncated": false
+    },
+    "runtime": {
+      "model_id": "jaredpalmer/kev-0.8b",
+      "checkpoint_revision": "225679690cdd1de6fceb1258b1bddf61c493cee9",
+      "source_revision": "4f8110a3f8620cc3a182ae9a708e4398492c4b1a",
+      "device": "rocm",
+      "torch": "2.8.0+rocm7.12.0",
+      "hip": "7.12.60610-2bd1678d3d",
+      "gpu": "AMD Radeon 890M Graphics"
+    },
+    "latency_ms": 59.4,
+    "memory": {
+      "peak_allocated_bytes": 1746922496,
+      "peak_reserved_bytes": 1793064960
+    },
+    "document": {
+      "document_id": "c1ed9770-61b7-4185-afdd-e627fe68c332",
+      "sha256": "8b91d064c839147cefc6159e6836713606ab014436fffd9c2463f6e39d9c9793",
+      "text_bytes": 143,
+      "line_count": 2,
+      "created_at": "2026-09-21T16:42:13.966274Z",
+      "title": null,
+      "source_url": null,
+      "fetched_at": null
+    },
+    "coverage": {
+      "kind": "partial",
+      "start_line": 2,
+      "end_line": 2,
+      "total_lines": 2
+    },
+    "end_to_end_ms": 72.36731587909162
+  },
+  "fetch_evaluate": {
+    "model": "kev-latest",
+    "usage": {
+      "input_tokens": 714,
+      "output_tokens": 53
+    },
+    "answers": {
+      "project": {
+        "type": "choice",
+        "choice": "Kev",
+        "confidence": 1.0,
+        "probabilities": {
+          "Kev": 1.0,
+          "SQLite": 0.0,
+          "Linux": 0.0
+        }
+      }
+    },
+    "token_accounting": {
+      "state_tokens": 697,
+      "branch_tokens": {
+        "project": 714
+      },
+      "packed_tokens": 714,
+      "state_truncated": false
+    },
+    "runtime": {
+      "model_id": "jaredpalmer/kev-0.8b",
+      "checkpoint_revision": "225679690cdd1de6fceb1258b1bddf61c493cee9",
+      "source_revision": "4f8110a3f8620cc3a182ae9a708e4398492c4b1a",
+      "device": "rocm",
+      "torch": "2.8.0+rocm7.12.0",
+      "hip": "7.12.60610-2bd1678d3d",
+      "gpu": "AMD Radeon 890M Graphics"
+    },
+    "latency_ms": 540.6,
+    "memory": {
+      "peak_allocated_bytes": 1760634880,
+      "peak_reserved_bytes": 1868562432
+    },
+    "document": {
+      "document_id": "ba8b8fde-4fcb-44bc-b0d4-ffd73de60dd2",
+      "sha256": "d497d4b89427a38b7232fab5a1dca27be0192ad4d0f444c9f8856cfcf68f7e5c",
+      "text_bytes": 26572,
+      "line_count": 368,
+      "created_at": "2026-09-21T16:42:14.160724Z",
+      "title": null,
+      "source_url": "https://raw.githubusercontent.com/jaredpalmer/kev/4f8110a3f8620cc3a182ae9a708e4398492c4b1a/README.md",
+      "fetched_at": "2026-09-21T16:42:14.160495Z"
+    },
+    "coverage": {
+      "kind": "partial",
+      "start_line": 1,
+      "end_line": 25,
+      "total_lines": 368
+    },
+    "end_to_end_ms": 558.6577209178358
+  },
+  "html_fetch": {
+    "document_id": "e165caa7-9950-4507-b36c-14bab4b1d932",
+    "sha256": "30b447a0391aa79dd38b866fd06463ee992abfa052b273d6b6687ed26f6e13df",
+    "text_bytes": 731,
+    "line_count": 5,
+    "created_at": "2026-09-21T16:42:14.781474Z",
+    "title": "Example Domains",
+    "source_url": "https://www.iana.org/help/example-domains",
+    "fetched_at": "2026-09-21T16:42:14.781392Z",
+    "end_to_end_ms": 62.15745094232261
+  },
+  "longer_input": {
+    "model": "kev-latest",
+    "usage": {
+      "input_tokens": 1196,
+      "output_tokens": 19
+    },
+    "answers": {
+      "charge": {
+        "type": "noul",
+        "noul": 1.0
+      }
+    },
+    "token_accounting": {
+      "state_tokens": 1179,
+      "branch_tokens": {
+        "charge": 1196
+      },
+      "packed_tokens": 1196,
+      "state_truncated": false
+    },
+    "runtime": {
+      "model_id": "jaredpalmer/kev-0.8b",
+      "checkpoint_revision": "225679690cdd1de6fceb1258b1bddf61c493cee9",
+      "source_revision": "4f8110a3f8620cc3a182ae9a708e4398492c4b1a",
+      "device": "rocm",
+      "torch": "2.8.0+rocm7.12.0",
+      "hip": "7.12.60610-2bd1678d3d",
+      "gpu": "AMD Radeon 890M Graphics"
+    },
+    "latency_ms": 876.6,
+    "memory": {
+      "peak_allocated_bytes": 1868375552,
+      "peak_reserved_bytes": 2105540608
+    },
+    "document": {
+      "document_id": "187ed8fe-b023-473a-97bf-c178e1b54d15",
+      "sha256": "d74045e30ca22559886cf457d4d69b351092aff37bd826eae173affa1be08d3b",
+      "text_bytes": 6011,
+      "line_count": 129,
+      "created_at": "2026-09-21T16:42:14.789231Z",
+      "title": null,
+      "source_url": null,
+      "fetched_at": null
+    },
+    "coverage": {
+      "kind": "full",
+      "start_line": 1,
+      "end_line": 129,
+      "total_lines": 129
+    },
+    "end_to_end_ms": 891.8235991150141
+  },
+  "oversized_rejected": {
+    "error": "[TextContent(type='text', text='Error executing tool kev_evaluate_document: Kev HTTP 422: state: 9001 tokens exceeds limit 8192; select fewer lines', annotations=None, meta=None)]",
+    "end_to_end_ms": 18.195996060967445
+  },
+  "token_boundary_preflight_only": {
+    "accepted": {
+      "token_accounting": {
+        "state_tokens": 8175,
+        "branch_tokens": {
+          "q": 8192
+        },
+        "packed_tokens": 8192,
+        "state_truncated": false
+      },
+      "runtime": {
+        "model_id": "jaredpalmer/kev-0.8b",
+        "checkpoint_revision": "225679690cdd1de6fceb1258b1bddf61c493cee9",
+        "source_revision": "4f8110a3f8620cc3a182ae9a708e4398492c4b1a",
+        "device": "rocm",
+        "torch": "2.8.0+rocm7.12.0",
+        "hip": "7.12.60610-2bd1678d3d",
+        "gpu": "AMD Radeon 890M Graphics"
+      }
+    },
+    "rejected": {
+      "detail": "question q: 8193 tokens (state 8176, question 17) exceeds branch limit 8192; select fewer lines or reduce options"
+    }
+  },
+  "contention": {
+    "success_count": 1,
+    "busy_errors": [
+      "Kev HTTP 503: Kev is busy; no request was queued; retry later",
+      "Kev HTTP 503: Kev is busy; no request was queued; retry later",
+      "Kev HTTP 503: Kev is busy; no request was queued; retry later"
+    ],
+    "recovery": {
+      "model": "kev-latest",
+      "usage": {
+        "input_tokens": 44,
+        "output_tokens": 19
+      },
+      "answers": {
+        "q": {
+          "type": "noul",
+          "noul": 1.0
+        }
+      },
+      "token_accounting": {
+        "state_tokens": 27,
+        "branch_tokens": {
+          "q": 44
+        },
+        "packed_tokens": 44,
+        "state_truncated": false
+      },
+      "runtime": {
+        "model_id": "jaredpalmer/kev-0.8b",
+        "checkpoint_revision": "225679690cdd1de6fceb1258b1bddf61c493cee9",
+        "source_revision": "4f8110a3f8620cc3a182ae9a708e4398492c4b1a",
+        "device": "rocm",
+        "torch": "2.8.0+rocm7.12.0",
+        "hip": "7.12.60610-2bd1678d3d",
+        "gpu": "AMD Radeon 890M Graphics"
+      },
+      "latency_ms": 146.3,
+      "memory": {
+        "peak_allocated_bytes": 1883776000,
+        "peak_reserved_bytes": 2105540608
+      }
+    }
+  },
+  "runtime_exit_code": 0
+}

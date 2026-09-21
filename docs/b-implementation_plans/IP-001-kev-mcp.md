@@ -2,10 +2,12 @@
 id: IP-001
 title: Document tools for Kev over MCP
 date: 2026-09-21
-status: draft
+status: complete
 ---
 
 # IP-001: Document tools for Kev over MCP
+
+David approved implementation on 2026-09-21: “IP-001 approved”.
 
 ## Outcome
 
