@@ -24,6 +24,8 @@ Kev supports yes/no, multiple-choice and ordered-rating questions. The calling a
 - [Native TypeSafe integration findings](docs/f-reports_reviews/2026-09-21-typesafe-integration.md)
 - [Measured Kev 0.8B and 4B ROCm results](docs/f-reports_reviews/2026-09-21-rocm-baseline.md)
 - [CR-001: completed implementation and end-to-end acceptance](docs/c-completion_reports/CR-001-kev-mcp.md)
+- [Durable dual-model services and Hermes setup](docs/durable-services.md)
+- [CR-002: service recovery and dual-model acceptance](docs/c-completion_reports/CR-002-durable-services.md)
 
 Upstream Kev supplies model loading, tokenization, System One conversion and probability calculation. This project adds document handling, strict input checks and MCP access. It uses the official TypeSafe SDK, not the general-LLM System One Adapter. There is no cloud fallback.
 
