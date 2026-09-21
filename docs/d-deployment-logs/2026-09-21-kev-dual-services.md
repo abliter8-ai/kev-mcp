@@ -39,7 +39,7 @@ Two model services, two bearer-authenticated loopback MCP endpoints, shared pers
 
 ## Verification
 
-Four active/enabled units, native checkpoint identity checks, all 28 Hermes profile/server connections, and 24 synthetic dual-model evaluations across service restart passed. Original document IDs remained usable from either model. Local lint, type checks, 34 tests and package build passed. See CR-002 for timings and coverage limits.
+Four active/enabled units, native checkpoint identity checks, all 28 Hermes profile/server connections, and 24 synthetic dual-model evaluations across service restart passed. Original document IDs remained usable from either model. Local lint, type checks, 34 tests and package build passed. The final fleet console parity gate and deployed native residency readback passed. See CR-002 for timings and coverage limits.
 
 ## Issues
 

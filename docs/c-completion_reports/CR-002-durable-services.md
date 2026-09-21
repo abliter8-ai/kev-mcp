@@ -21,6 +21,13 @@ All 14 Hermes profile configurations contain both connections and explicit tool 
 - `scripts/service-acceptance.py`: 12 evaluations passed before restart and 12 after restart using the original document IDs. Three cases covered choice, yes/no probability and ordered score. Serial and simultaneous requests used both loaded models. Both endpoints rejected unauthenticated access and exposed five tools.
 - Native Hermes checks: 28 profile/server connections passed discovery and real evaluation, repeated after service restart; both toolsets were included in each profile's effective API selection.
 - Four service units read back as active and enabled. Permanent layout has no symlinks into experiment directories. Source revision and environment lockfile hashes are retained in the private deployment record.
+- Fleet integration passed the complete console parity gate: planner tests/typecheck,
+  fresh observations, native residency agreement across 38 lanes, and deployed console
+  readback. The deployed console reports both Kev identities from their native
+  capabilities endpoints. Planner drift was zero at final acceptance.
+- Published through [PR #1](https://github.com/abliter8-ai/kev-mcp/pull/1); branch,
+  pull-request and merged-main CI checks passed. Deployed files were checked against
+  the published Git revision.
 
 Public synthetic evidence: [before restart](../f-reports_reviews/evidence/durable-before.json) and [after restart](../f-reports_reviews/evidence/durable-after.json).
 
@@ -41,4 +48,4 @@ The prior 8,192-token branch and 16,384 packed-token limits remain. Full-context
 
 ## Operation and context
 
-[Durable setup and rollback](../durable-services.md) records portable paths, environment settings, unit installation, Hermes connections and retained-data recovery. The IP-002 status tracks final fleet-console integration. AGENTS.md records the new service architecture. No pre-existing KNOWN_ISSUES.md blocker was resolved; no such file exists in this repository.
+[Durable setup and rollback](../durable-services.md) records portable paths, environment settings, unit installation, Hermes connections and retained-data recovery. Context sync: matching IP-002 frontmatter status was updated to `complete`. AGENTS.md records the new service architecture. No pre-existing KNOWN_ISSUES.md blocker was resolved; no such file exists in this repository.

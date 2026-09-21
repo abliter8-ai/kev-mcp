@@ -2,7 +2,7 @@
 id: IP-002
 title: Durable dual-model services and Hermes connections
 date: 2026-09-21
-status: in_progress
+status: complete
 ---
 
 # IP-002: Durable dual-model services
